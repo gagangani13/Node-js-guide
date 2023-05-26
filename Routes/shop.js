@@ -1,6 +1,9 @@
-const express=require('express')
+const path=require('path')
+const express=require('express');
+const rootDir = require('../Helper/rootDir');
 const router=express.Router()
 router.get("/", (req, res, next) => {
-    res.send("<h1>Welcome to Express</h1>");
+    // res.sendFile(path.join(__dirname,'../','Views','shop.html'));
+    res.sendFile(path.join(rootDir,'Views','shop.html'));
   });
 module.exports=router
